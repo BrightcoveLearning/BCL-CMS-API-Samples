@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title></title>
+        <title>CMS API Text Track URL Updater</title>
         <style>
         body {
         margin: 2em;
@@ -43,8 +43,11 @@
         </style>
     </head>
     <body>
-        <h1>CMS API Geo-Filtering Updater</h1>
-        <p>Note: this app updates <code>geo</code> properties for <strong>all videos</strong> in an account.</p>
+        <h1>CMS API Text Track URL Updater</h1>
+        <p>Note: this app updates text track src properties to use <code>https</code> instead of <code>http</code> as the protocol. Prevents failure to load text tracks in SSL environments.</p>
+        <p><input id="account_id" type="text"></p>
+        <p><input id="client_id" type="text"></p>
+        <p><input id="client_secret" type="text"></p>
         <p>
             <button id="updateVideos" disabled="disabled">Update videos</button>
         </p>
@@ -71,11 +74,6 @@ var BCLS = (function(window, document) {
       videoCount              = 0,
       count                   = document.getElementById('count'),
       allButtons              = document.getElementsByTagName('button'),
-      excludedEl              = document.getElementsByName('excluded'),
-      countries               = document.getElementById('countries'),
-      selectedCountries       = document.getElementById('selectedCountries'),
-      addCountry              = document.getElementById('addCountry'),
-      removeCountry           = document.getElementById('removeCountry'),
       updateVideos            = document.getElementById('updateVideos'),
       apiRequest              = document.getElementById('apiRequest'),
       apiData                 = document.getElementById('apiData'),
@@ -108,44 +106,6 @@ var BCLS = (function(window, document) {
         }
     }
 
-    /**
-     * gets the selected value for the excluded radio group and sets the var
-     */
-    function getExcludedValue() {
-        iMax = excludedEl.length;
-        for (i = 0; i < iMax; i++) {
-            if (excludedEl[i].checked === true) {
-                if (excludedEl[i].value === 'true') {
-                    excluded = true;
-                } else {
-                    excluded = false;
-                }
-            }
-        }
-    }
-
-    /**
-     * sort the elements of an array - use as is to sort by text
-     * to sort by value, make that the 0 element of the tmpAry
-     * @param  {HTMLElement} selElem the select element
-     */
-    function sortSelect(selElem) {
-    var tmpAry = new Array();
-    for (var i=0;i<selElem.options.length;i++) {
-        tmpAry[i] = new Array();
-        tmpAry[i][0] = selElem.options[i].text;
-        tmpAry[i][1] = selElem.options[i].value;
-    }
-    tmpAry.sort();
-    while (selElem.options.length > 0) {
-        selElem.options[0] = null;
-    }
-    for (var i=0;i<tmpAry.length;i++) {
-        var op = new Option(tmpAry[i][0], tmpAry[i][1]);
-        selElem.options[i] = op;
-    }
-    return;
-}
 
     /**
      * gets a collection of selected options for multi-select control

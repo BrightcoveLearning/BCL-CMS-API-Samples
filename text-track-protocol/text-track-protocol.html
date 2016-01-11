@@ -106,64 +106,17 @@ var BCLS = (function(window, document) {
         }
     }
 
-
     /**
-     * gets a collection of selected options for multi-select control
-     * @param  {Element}   sel      the selector element
-     * @param  {Function} [callback] callback to handle individual selected options
-     * @return {Array}  array of selected options
+     * changes protocol of URLs from http to https
+     * @param {Array} text_tracks array of text track objects
      */
-    function getSelectedOptions(sel, callback) {
-        var opts = [], opt, i, len;
-        i = sel.options.length;
-        // loop through options in select list
-        while (i > 0) {
-            i--;
-            opt = sel.options[i];
-            console.log(opt);
-            // check if selected
-            if ( opt.selected ) {
-                // add to array of option elements to return from this function
-                opts.push(opt);
-
-                // invoke optional callback function if provided
-                // and pass the selector and the selected option
-                if (callback) {
-                    callback(sel, opt);
-                }
-            }
-        }
-
-        // return array containing references to selected option elements
-        return opts;
+    function changeProtocol(text_tracks) {
+        var i,
+            iMax = text_tracks.length,
+            j,
+            jMax;
     }
 
-    /**
-     * or removes country codes to country array
-     * this is a callback for getSelectedOptions
-     * @param  {HTMLElement} sel the selector that is processing
-     * @param  {HTMLElement} opt the option to be processed
-     */
-    function addtoCountriesArray(sel, opt) {
-        var i, iMax;
-        if (sel.id === 'countries') {
-            countriesArray.push(opt.value);
-            sel.removeChild(opt);
-            selectedCountries.appendChild(opt);
-        } else {
-            sel.removeChild(opt);
-            countries.appendChild(opt);
-            sortSelect(countries);
-            iMax = countriesArray.length;
-            for (i = 0; i < iMax; i++) {
-                if (countriesArray[i] === opt.value) {
-                    countriesArray.splice(i, 1);
-                    break;
-                }
-            }
-        }
-
-    }
 
     /**
      * sets up the data for the API request

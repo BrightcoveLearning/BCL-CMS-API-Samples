@@ -1,0 +1,158 @@
+[
+    {
+        "account_id": "20318290001",
+        "complete": true,
+        "created_at": "2010-07-16T19:20:23.395Z",
+        "cue_points": [],
+        "custom_fields": {
+            "inproduct": "Video Cloud",
+            "topic": "VC - Publishing Videos"
+        },
+        "description": "This video shows you how to quickly publish a single video using Video Cloud Studio",
+        "digital_master_id": "2893624424001",
+        "duration": 179746,
+        "economics": "AD_SUPPORTED",
+        "folder_id": "55cb595ae4b0a943a9195136",
+        "geo": null,
+        "id": "129226712001",
+        "images": {
+            "poster": {
+                "asset_id": "2893624429001",
+                "remote": false,
+                "sources": [
+                    {
+                        "height": null,
+                        "src": "http://brightcove04.o.brightcove.com/20318290001/20318290001_2893624429001_Quick-Video-Publishing.jpg?pubId=20318290001&videoId=129226712001",
+                        "width": null
+                    },
+                    {
+                        "height": null,
+                        "src": "https://brightcove04pmdo-a.akamaihd.net/20318290001/20318290001_2893624429001_Quick-Video-Publishing.jpg?pubId=20318290001&videoId=129226712001",
+                        "width": null
+                    }
+                ],
+                "src": "http://brightcove04.o.brightcove.com/20318290001/20318290001_2893624429001_Quick-Video-Publishing.jpg?pubId=20318290001&videoId=129226712001"
+            },
+            "thumbnail": {
+                "asset_id": "2893665768001",
+                "remote": false,
+                "sources": [
+                    {
+                        "height": null,
+                        "src": "http://brightcove04.o.brightcove.com/20318290001/20318290001_2893665768001_Quick-Video-Publishing.jpg?pubId=20318290001&videoId=129226712001",
+                        "width": null
+                    },
+                    {
+                        "height": null,
+                        "src": "https://brightcove04pmdo-a.akamaihd.net/20318290001/20318290001_2893665768001_Quick-Video-Publishing.jpg?pubId=20318290001&videoId=129226712001",
+                        "width": null
+                    }
+                ],
+                "src": "http://brightcove04.o.brightcove.com/20318290001/20318290001_2893665768001_Quick-Video-Publishing.jpg?pubId=20318290001&videoId=129226712001"
+            }
+        },
+        "link": {
+            "text": "Quick Video Publishing",
+            "url": "http://support.brightcove.com/en/docs/quick-video-publishing"
+        },
+        "long_description": null,
+        "name": "Quick Video Publishing",
+        "original_filename": "Quick Video Publishing.mp4",
+        "reference_id": "129226712001",
+        "schedule": null,
+        "sharing": {
+            "by_external_acct": false,
+            "by_id": null,
+            "by_reference": false,
+            "source_id": null,
+            "to_external_acct": true
+        },
+        "state": "ACTIVE",
+        "tags": [
+            "studio",
+            "basics",
+            "3play_processed",
+            "players",
+            "mediamodule",
+            "drupal"
+        ],
+        "text_tracks": [
+            {
+                "asset_id": null,
+                "default": true,
+                "id": null,
+                "kind": "captions",
+                "label": "English",
+                "mime_type": "text/vtt",
+                "sources": [
+                    {
+                        "src": "https://static.3playmedia.com/p/projects/10127/files/316961/captions.vtt?platform=brightcove"
+                    }
+                ],
+                "src": "https://static.3playmedia.com/p/projects/10127/files/316961/captions.vtt?platform=brightcove",
+                "srclang": "en"
+            },
+            {
+                "asset_id": null,
+                "default": false,
+                "id": null,
+                "kind": "captions",
+                "label": "Spanish",
+                "mime_type": "text/vtt",
+                "sources": [
+                    {
+                        "src": "https://static.3playmedia.com/p/projects/10127/files/316961/translations/2332/captions.vtt?platform=brightcove"
+                    }
+                ],
+                "src": "https://static.3playmedia.com/p/projects/10127/files/316961/translations/2332/captions.vtt?platform=brightcove",
+                "srclang": "es"
+            },
+            {
+                "asset_id": null,
+                "default": false,
+                "id": null,
+                "kind": "captions",
+                "label": "German",
+                "mime_type": "text/vtt",
+                "sources": [
+                    {
+                        "src": "https://static.3playmedia.com/p/projects/10127/files/316961/translations/2330/captions.vtt?platform=brightcove"
+                    }
+                ],
+                "src": "https://static.3playmedia.com/p/projects/10127/files/316961/translations/2330/captions.vtt?platform=brightcove",
+                "srclang": "de"
+            },
+            {
+                "asset_id": null,
+                "default": false,
+                "id": null,
+                "kind": "captions",
+                "label": "French",
+                "mime_type": "text/vtt",
+                "sources": [
+                    {
+                        "src": "https://static.3playmedia.com/p/projects/10127/files/316961/translations/2329/captions.vtt?platform=brightcove"
+                    }
+                ],
+                "src": "https://static.3playmedia.com/p/projects/10127/files/316961/translations/2329/captions.vtt?platform=brightcove",
+                "srclang": "fr"
+            },
+            {
+                "asset_id": null,
+                "default": false,
+                "id": null,
+                "kind": "captions",
+                "label": "Japanese",
+                "mime_type": "text/vtt",
+                "sources": [
+                    {
+                        "src": "https://static.3playmedia.com/p/projects/10127/files/316961/translations/2331/captions.vtt?platform=brightcove"
+                    }
+                ],
+                "src": "https://static.3playmedia.com/p/projects/10127/files/316961/translations/2331/captions.vtt?platform=brightcove",
+                "srclang": "ja"
+            }
+        ],
+        "updated_at": "2016-01-10T12:03:29.803Z"
+    }
+]

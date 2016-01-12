@@ -114,7 +114,14 @@ var BCLS = (function(window, document) {
         var i,
             iMax = text_tracks.length,
             j,
-            jMax;
+            jMax = text_tracks.sources.length;
+        for (i = 0; i < iMax; i += 1) {
+            text_tracks[i].src = text_tracks[i].src.replace('http:', 'https:');
+            for (j = 0; j < jMax; j += 1) {
+                text_tracks[i].sources[j].src = text_tracks[i].sources[j].src.replace('http:', 'https:');
+            }
+        }
+        return;
     }
 
 

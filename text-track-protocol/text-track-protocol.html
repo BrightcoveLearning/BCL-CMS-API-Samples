@@ -49,7 +49,7 @@
         <p>Client id: <input id="client_id" type="text"></p>
         <p>Client secret: <input id="client_secret" type="text"></p>
         <p>
-            <button id="updateVideos" disabled="disabled">Update videos</button>
+            <button id="updateVideos">Update videos</button>
         </p>
         <p><strong id="count"></strong></p>
         <p><strong id="logger"></strong></p>
@@ -198,7 +198,7 @@ var BCLS = (function(window, document) {
                         // set the video id for the update
                         video_id = parsedData[0].id;
                         video_name = parsedData[0].name;
-                        text_tracks = parseData[0].text_tracks;
+                        text_tracks = parsedData[0].text_tracks;
                         text_tracks = changeProtocol(text_tracks);
                         //
                         logger.textContent = 'Processing ' + video_name;

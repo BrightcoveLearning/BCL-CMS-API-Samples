@@ -14,12 +14,8 @@
         button {
         padding: .5em;
         }
-        .exchange {
-            width: 100%;
-        }
-        div.select {
-            display: inline-block;
-            vertical-align: middle;
+        fieldset {
+            border: 1px solid #ccc;
         }
         pre {
         background-color: #F1EFEE;
@@ -45,30 +41,39 @@
     <body>
         <h1>CMS API Text Track URL Updater</h1>
         <p>This app updates text track src properties to use <code>https</code> instead of <code>http</code> as the protocol. Prevents failure to load text tracks in SSL environments.</p>
-        <p>Account id: <input id="account_id" type="text"></p>
-        <p>Client id: <input id="client_id" type="text"></p>
-        <p>Client secret: <input id="client_secret" type="text"></p>
-        <p>
-            <button id="updateVideos">Update videos</button>
-        </p>
-        <p><strong id="count"></strong></p>
-        <p><strong id="logger"></strong></p>
-        <p><strong>API request:</strong></p>
-    <pre id="apiRequest"></pre>
-    <p><strong>Input data for write requests:</strong></p>
-    <pre id="apiData"></pre>
-    <p><strong>Request method:</strong></p>
-    <pre id="apiMethod"></pre>
-    <p><strong>Response data</strong></p>
-<pre id="responseData"></pre>
+        <fieldset>
+            <legend>Inputs</legend>
+            <p><strong>Account id:</strong> <input id="account_id" type="text"></p>
+            <p><strong>Client id:</strong> <input id="client_id" type="text"></p>
+            <p><strong>Client secret:</strong> <input id="client_secret" type="text"></p>
+            <p>
+                <button id="updateVideos">Update videos</button>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Outputs</legend>
+            <p><strong id="count"></strong></p>
+            <p><strong id="logger"></strong></p>
+            <p><strong>API request:</strong></p>
+                <pre id="apiRequest"></pre>
+                <p><strong>Input data for write requests:</strong></p>
+                <pre id="apiData"></pre>
+                <p><strong>Request method:</strong></p>
+                <pre id="apiMethod"></pre>
+                <p><strong>Response data</strong></p>
+            <pre id="responseData"></pre>
+        </fieldset>
 <script>
 var BCLS = (function(window, document) {
-  var baseURL                 = 'https://cms.api.brightcove.com/v1/accounts/1485884786001',
-      proxyURL                = 'https://solutions.brightcove.com/bcls/bcls-proxy/beml-proxy.php',
+  var baseURL                 = 'https://cms.api.brightcove.com/v1/accounts/',
+      proxyURL                = 'https://solutions.brightcove.com/bcls/bcls-proxy/bcls-proxy.php',
       video_id                = '',
       video_name              = '',
       offset                  = 0,
       videoCount              = 0,
+      account_id              = document.getElementById('account_id'),
+      client_id               = document.getElementById('client_id'),
+      client_secret           = document.getElementById('client_secret'),
       count                   = document.getElementById('count'),
       allButtons              = document.getElementsByTagName('button'),
       updateVideos            = document.getElementById('updateVideos'),
@@ -81,6 +86,18 @@ var BCLS = (function(window, document) {
       text_tracks,
       i,
       iMax;
+
+    /**
+    * tests for all the ways a variable might be undefined or not have a value
+    * @param {*} x the variable to test
+    * @return {Boolean} true if variable is defined and has a value
+    **/
+    function isDefined(x) {
+        if ( x === "" || x === null || x === undefined || x === NaN) {
+           return false;
+        }
+        return true;
+    };
 
     /**
      * disables all buttons so user can't submit new request until current one finishes
@@ -112,12 +129,16 @@ var BCLS = (function(window, document) {
         var i,
             iMax = tracks.length,
             j,
-            jMax = tracks.sources.length;
+            jMax;
         for (i = 0; i < iMax; i += 1) {
             tracks[i].src = tracks[i].src.replace('http:', 'https:');
-            for (j = 0; j < jMax; j += 1) {
-                tracks[i].sources[j].src = tracks[i].sources[j].src.replace('http:', 'https:');
+            if (isDefined(tracks[i].sources)) {
+                jMax = tracks[i].sources.length;
+                for (j = 0; j < jMax; j += 1) {
+                    tracks[i].sources[j].src = tracks[i].sources[j].src.replace('http:', 'https:');
+                }
             }
+
         }
         return tracks;
     }
@@ -189,6 +210,7 @@ var BCLS = (function(window, document) {
                         parsedData = JSON.parse(responseRaw);
                         // set total videos
                         videoCount = parsedData.count;
+                        console.log('count', videoCount);
                         count.textContent = 'Total videos: ' + videoCount;
                         setRequestData('get1video');
                       } else if (requestID === 'get1video') {
@@ -199,6 +221,7 @@ var BCLS = (function(window, document) {
                         video_id = parsedData[0].id;
                         video_name = parsedData[0].name;
                         text_tracks = parsedData[0].text_tracks;
+                        console.log('text_tracks', text_tracks);
                         text_tracks = changeProtocol(text_tracks);
                         //
                         logger.textContent = 'Processing ' + video_name;
@@ -226,7 +249,7 @@ var BCLS = (function(window, document) {
                 }
             };
         // set up request data
-        requestParams = "url=" + encodeURIComponent(options.url) + "&requestType=" + options.requestType;
+        requestParams = 'url=' + encodeURIComponent(options.url) + '&requestType=' + options.requestType + '&client_id=' + client_id.value + '&client_secret=' + client_secret.value;
         if (options.requestBody) {
             dataString = JSON.stringify(options.requestBody);
             requestParams += "&requestBody=" + encodeURIComponent(dataString);
@@ -243,6 +266,7 @@ var BCLS = (function(window, document) {
     }
     // event listeners
     updateVideos.addEventListener('click', function() {
+        baseURL += account_id.value;
         setRequestData('getCount');
     });
 })(window, document);

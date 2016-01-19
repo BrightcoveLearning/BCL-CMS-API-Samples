@@ -131,11 +131,11 @@ var BCLS = (function(window, document) {
             j,
             jMax;
         for (i = 0; i < iMax; i += 1) {
-            tracks[i].src = tracks[i].src.replace('http:', 'https:');
+            tracks[i].src = tracks[i].src.replace('http://', '//');
             if (isDefined(tracks[i].sources)) {
                 jMax = tracks[i].sources.length;
                 for (j = 0; j < jMax; j += 1) {
-                    tracks[i].sources[j].src = tracks[i].sources[j].src.replace('http:', 'https:');
+                    tracks[i].sources[j].src = tracks[i].sources[j].src.replace('http://', '//');
                 }
             }
 

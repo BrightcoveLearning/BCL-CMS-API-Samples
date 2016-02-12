@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title></title>
+        <title>CMS API Sample: MRSS Generator</title>
         <style>
             body {
                 margin: 3em;
@@ -24,9 +24,40 @@
         <ul>
             <li><a href="https://github.com/vkiryukhin/vkBeautify">vkBeautify</a></li>
         </ul>
+        <fieldset>
+            <legend>Inputs</legend>
+            <p><strong>Account id:</strong> <input id="account_id" type="text" value="1752604059001"></p>
+            <p><strong>Client id:</strong> <input id="client_id" type="text" size="60" value="c5d0a622-5479-46d8-8d8a-5f034b943fab"></p>
+            <p><strong>Client secret:</strong> <input id="client_secret" type="text" size="60" value="w7NQYu0vUloM4GYYy2SXAxrvyFpt8fwI35qAFZcS13-VIgs0itwKNsAwHOS80sOWKJ1BUwHIvSFG2IbgcxEGKg"></p>
+            <p>Number of videos to include: <select name="dimensionSelect" id="numberSelect"></select></p>
+            <p>Sort by:
+                <select name="sortSelect" id="sortSelect">
+                    <option value="updated_at">Date last updated</option>
+                    <option value="created_at">Date added</option>
+                </select>
+            </p>
+            <div id="fieldsCol1" class="fields-list"></div>
+            <div id="fieldsCol2" class="fields-list"></div>
+            <p><button id="getData">Get Analytics Data</button></p>
+        </fieldset>
         <script src="//docs.brightcove.com/en/scripts/vkbeautify.0.99.00.beta.js"></script>
         <script>
+        var BCLS = ( function () {
+            var mrssStr = '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml">',
+            sChannel = '<channel>',
+            eChannel = '</channel>',
+            sTitle = '<title>',
+            eTitle = '</title>',
+            sDescription = '<description>',
+            eDescription = '</description>',
+            sItem = '<item>',
+            eItem = '</item>',
+            sLink = '<link>',
+            eLink = '</link>',
+            sMediaContent = '<media:content ',
+            eMediaContent = ' />',
 
+        })();
         </script>
     </body>
 </html>

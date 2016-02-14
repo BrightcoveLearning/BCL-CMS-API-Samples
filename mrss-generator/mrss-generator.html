@@ -25,41 +25,261 @@
             <li><a href="https://github.com/vkiryukhin/vkBeautify">vkBeautify</a></li>
         </ul>
         <fieldset>
-            <legend>Inputs</legend>
-            <p><strong>Account id:</strong> <input id="account_id" type="text" value="1752604059001"></p>
-            <p><strong>Client id:</strong> <input id="client_id" type="text" size="60" value="c5d0a622-5479-46d8-8d8a-5f034b943fab"></p>
-            <p><strong>Client secret:</strong> <input id="client_secret" type="text" size="60" value="w7NQYu0vUloM4GYYy2SXAxrvyFpt8fwI35qAFZcS13-VIgs0itwKNsAwHOS80sOWKJ1BUwHIvSFG2IbgcxEGKg"></p>
-            <p>Number of videos to include: <select name="dimensionSelect" id="numberSelect"></select></p>
-            <p>Sort by:
+            <legend>Input</legend>
+            <p>
+                If you do not enter account information, a Brightcove sample account will be used.
+            </p>
+            <h5>Account id: <input id="account_id" type="text" placeholder="1752604059001"></h5>
+            <h5>Client id: <input id="client_id" type="text" size="60" placeholder="c5d0a622-5479-46d8-8d8a-5f034b943fab"></h5>
+            <h5>Client secret: <input id="client_secret" type="text" size="60" placeholder="w7NQYu0vUloM4GYYy2SXAxrvyFpt8fwI35qAFZcS13-VIgs0itwKNsAwHOS80sOWKJ1BUwHIvSFG2IbgcxEGKg"></h5>
+            <h5>Number of videos to include: <select name="numberSelect" id="numberSelect">
+                <option value="25" selected="selected">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="all">all</option>
+            </select></h5>
+            <h5>Search string to select videos (optional)<input id="searchStr" type="text" placeholder="tags:foo"></h5>
+            <h5>Sort by:
                 <select name="sortSelect" id="sortSelect">
-                    <option value="updated_at">Date last updated</option>
+                    <option value="updated_at" selected="selected">Date last updated</option>
                     <option value="created_at">Date added</option>
                 </select>
-            </p>
-            <div id="fieldsCol1" class="fields-list"></div>
-            <div id="fieldsCol2" class="fields-list"></div>
-            <p><button id="getData">Get Analytics Data</button></p>
+                <select name="directionSelect" id="directionSelect">
+                    <option value="-" selected="selected">descending</option>
+                    <option value="">ascending</option>
+                </select>
+            </h5>
+            <p><button id="makeFeed">Generate the Feed</button></p>
+        </fieldset>
+        <fieldset>
+            <legend>Output</legend>
+            <h5 id="logger">Waiting for input...</h5>
+            <h5 id="countDisplay"></h5>
+            <pre><code id="apiRequest"></code></pre>
+            <pre><code id="feedDisplay"></code></pre>
         </fieldset>
         <script src="//docs.brightcove.com/en/scripts/vkbeautify.0.99.00.beta.js"></script>
         <script>
         var BCLS = ( function () {
-            var mrssStr = '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml">',
-            sChannel = '<channel>',
-            eChannel = '</channel>',
-            sTitle = '<title>',
-            eTitle = '</title>',
-            sDescription = '<description>',
-            eDescription = '</description>',
-            sItem = '<item>',
-            eItem = '</item>',
-            sLink = '<link>',
-            eLink = '</link>',
-            sMediaContent = '<media:content ',
-            eMediaContent = ' />',
-            sMediaEmbed = '<media:embed ',
-            eMediaEmbed = '</media:embed',
-            sMediaStatus = '<media:status state="',
-            eMediaStatus = '" />'
+                var mrssStr = '<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/" xmlns:georss="http://www.georss.org/georss" xmlns:gml="http://www.opengis.net/gml">',
+                sChannel = '<channel>',
+                eChannel = '</channel>',
+                sTitle = '<title>',
+                eTitle = '</title>',
+                sDescription = '<description>',
+                eDescription = '</description>',
+                sItem = '<item>',
+                eItem = '</item>',
+                sLink = '<link>',
+                eLink = '</link>',
+                sMediaContent = '<media:content ',
+                eMediaContent = ' />',
+                sMediaEmbed = '<media:embed ',
+                eMediaEmbed = '</media:embed',
+                sMediaStatus = '<media:status state="',
+                eMediaStatus = '" />',
+                // account stuff
+                accountId,
+                clientId,
+                clientSecret,
+                // api stuff
+                proxyURL = 'https://solutions.brightcove.com/bcls/bcls-proxy/mrss-proxy.php',
+                cmsURL = 'https://cms.api.brightcove.com/v1/accounts/',
+                sort,
+                sortDirection = "",
+                search,
+                limit = 25,
+                totalVideos = 0,
+                totalCalls = 0,
+                callNumber = 0,
+                // elements
+                account_id = document.getElementById('account_id'),
+                client_id = document.getElementById('clientId'),
+                client_secret = document.getElementById('client_secret'),
+                numberSelect = document.getElementById('numberSelect'),
+                searchStr = document.getElementById('searchStr'),
+                sortSelect = document.getElementById('sortSelect'),
+                directionSelect = document.getElementById('directionSelect'),
+                makeFeed = document.getElementById('makeFeed'),
+                logger = document.getElementById('logger'),
+                countDisplay = document.getElementById('countDisplay'),
+                apiRequest = document.getElementById('apiRequest'),
+                feedDisplay = document.getElementById('feedDisplay');
+
+            /**
+             * tests for all the ways a variable might be undefined or not have a value
+             * @param {String|Number} x the variable to test
+             * @return {Boolean} true if variable is defined and has a value
+             */
+            function isDefined(x){
+                if ( x === "" || x === null || x === undefined || x === NaN) {
+                    return false;
+                }
+                return true;
+            }
+
+            /**
+             * get selected value for single select element
+             * @param {htmlElement} e the select element
+             */
+            function getSelectedValue(e) {
+                return e.options[e.selectedIndex].value;
+            }
+
+
+            /**
+             * disables all buttons so user can't submit new request until current one finishes
+             */
+            function disableButtons() {
+                var i,
+                    iMax = allButtons.length;
+                for (i = 0; i < iMax; i++) {
+                    allButtons[i].setAttribute('disabled', 'disabled');
+                }
+            }
+
+            /**
+             * re-enables all buttons
+             */
+            function enableButtons() {
+                var i,
+                    iMax = allButtons.length;
+                for (i = 0; i < iMax; i++) {
+                    allButtons[i].removeAttribute('disabled');
+                }
+            }
+            /**
+             * sets up the data for the API request
+             * @param {String} id the id of the button that was clicked
+             */
+            function setRequestData(id) {
+                var endPoint = '',
+                    requestData = {};
+                // disable buttons to prevent a new request before current one finishes
+                disableButtons();
+                switch (id) {
+                    case 'getCount':
+                        endPoint = '/counts/videos';
+                        requestData.url = baseURL + endPoint;
+                        requestData.requestType = 'GET';
+                        apiRequest.textContent = requestData.url;
+                        getMediaData(requestData, id);
+                        break;
+                    case 'get1video':
+                        endPoint = '/videos?limit=1&sort=created_at&offset=' + offset;
+                        requestData.url = baseURL + endPoint;
+                        requestData.requestType = 'GET';
+                        apiRequest.textContent = requestData.url;
+                        getMediaData(requestData, id);
+                        break;
+                    case 'updateVideos':
+                        endPoint = '/videos/' + video_id;
+                        requestData.url = baseURL + endPoint;
+                        requestData.requestType = 'PATCH';
+                        requestData.requestBody = {geo: {countries: countriesArray, exclude_countries: excluded, restricted: true}};
+                        apiRequest.textContent = requestData.url;
+                        apiData.textContent = JSON.stringify(requestData.requestBody);
+                        getMediaData(requestData, id);
+                        break;
+                }
+            }
+
+            /**
+             * send API request to the proxy
+             * @param  {Object} requestData options for the request
+             * @param  {String} requestID the type of request = id of the button
+             */
+            function getMediaData(options, requestID) {
+                var httpRequest = new XMLHttpRequest(),
+                    responseRaw,
+                    parsedData,
+                    requestParams,
+                    dataString,
+                    // response handler
+                    getResponse = function() {
+                        try {
+                          if (httpRequest.readyState === 4) {
+                            if (httpRequest.status === 200) {
+                              // check for completion
+                              if (requestID === 'getCount') {
+                                if (httpRequest.responseText === '[]') {
+                                    // no video returned
+                                    alert('no video returned');
+                                }
+                                responseRaw = httpRequest.responseText;
+                                responseData.textContent = responseRaw;
+                                parsedData = JSON.parse(responseRaw);
+                                // set total videos
+                                videoCount = parsedData.count;
+                                count.textContent = 'Total videos: ' + videoCount;
+                                setRequestData('get1video');
+                              } else if (requestID === 'get1video') {
+                                responseRaw = httpRequest.responseText;
+                                responseData.textContent = responseRaw;
+                                parsedData = JSON.parse(responseRaw);
+                                // set the video id for the update
+                                video_id = parsedData[0].id;
+                                video_name = parsedData[0].name;
+                                logger.textContent = 'Processing ' + video_name;
+                                setRequestData('updateVideos');
+                              } else if (requestID === 'updateVideos') {
+                                responseRaw = httpRequest.responseText;
+                                responseData.textContent = responseRaw;
+                                // increment offset
+                                offset++;
+                                if (offset < videoCount) {
+                                    // move on to next video
+                                    setRequestData('get1video');
+                                } else {
+                                    // we are done
+                                    logger.textContent = 'Finished... ' + offset + ' videos processed'
+                                }
+
+                              }
+                            } else {
+                              alert('There was a problem with the request. Request returned ' + httpRequest.status);
+                            }
+                          }
+                        } catch (e) {
+                          alert('Caught Exception: ' + e);
+                        }
+                    };
+                // set up request data
+                requestParams = "url=" + encodeURIComponent(options.url) + "&requestType=" + options.requestType;
+                if (options.requestBody) {
+                    dataString = JSON.stringify(options.requestBody);
+                    requestParams += "&requestBody=" + encodeURIComponent(dataString);
+                }
+
+                // set response handler
+                httpRequest.onreadystatechange = getResponse;
+                // open the request
+                httpRequest.open('POST', proxyURL);
+                // set headers
+                httpRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                // open and send request
+                httpRequest.send(requestParams);
+            }
+
+            function init() {
+                // event handlers
+                makeFeed.addEventListener('click' function() {
+                    var numVideos;
+                    sort = getSelectedValue(sortSelect);
+                    sortDirection = getSelectedValue(directionSelect);
+                    if (isDefined(sortDirection)) {
+                        sort = sortDirection + sort;
+                    }
+                    numVideos = getSelectedValue(numberSelect);
+                    if (numVideos === 'all') {
+                        // we need to get the count
+                        setRequestData('getCount');
+                    } else {
+                        totalVideos = parseInt(numVideos);
+                        totalCalls = Math.ceil(numVideos / limit);
+                    }
+                });
+            }
 
         })();
         </script>

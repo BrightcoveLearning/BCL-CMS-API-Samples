@@ -84,7 +84,7 @@
                 clientSecret,
                 // api stuff
                 proxyURL = 'https://solutions.brightcove.com/bcls/bcls-proxy/mrss-proxy.php',
-                cmsURL = 'https://cms.api.brightcove.com/v1/accounts/',
+                baseURL = 'https://cms.api.brightcove.com/v1/accounts/',
                 sort,
                 sortDirection = "",
                 search,
@@ -165,20 +165,13 @@
                         apiRequest.textContent = requestData.url;
                         getMediaData(requestData, id);
                         break;
+                    case 'getVideos':
+
                     case 'get1video':
                         endPoint = '/videos?limit=1&sort=created_at&offset=' + offset;
                         requestData.url = baseURL + endPoint;
                         requestData.requestType = 'GET';
                         apiRequest.textContent = requestData.url;
-                        getMediaData(requestData, id);
-                        break;
-                    case 'updateVideos':
-                        endPoint = '/videos/' + video_id;
-                        requestData.url = baseURL + endPoint;
-                        requestData.requestType = 'PATCH';
-                        requestData.requestBody = {geo: {countries: countriesArray, exclude_countries: excluded, restricted: true}};
-                        apiRequest.textContent = requestData.url;
-                        apiData.textContent = JSON.stringify(requestData.requestBody);
                         getMediaData(requestData, id);
                         break;
                 }
@@ -265,6 +258,9 @@
                 // event handlers
                 makeFeed.addEventListener('click' function() {
                     var numVideos;
+                    accountId = account_id.value;
+                    clientId = client_id.value;
+                    clientSecret = client_secret.value;
                     sort = getSelectedValue(sortSelect);
                     sortDirection = getSelectedValue(directionSelect);
                     if (isDefined(sortDirection)) {
@@ -277,6 +273,7 @@
                     } else {
                         totalVideos = parseInt(numVideos);
                         totalCalls = Math.ceil(numVideos / limit);
+                        setRequestData('getVideos')
                     }
                 });
             }

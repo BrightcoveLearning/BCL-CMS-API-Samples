@@ -159,7 +159,10 @@
                 disableButtons();
                 switch (id) {
                     case 'getCount':
-                        endPoint = '/counts/videos';
+                        endPoint = accountId + '/counts/videos?sort=' + sort;
+                        if (isDefined(search)) {
+                            endPoint += '&search=' + search;
+                        }
                         requestData.url = baseURL + endPoint;
                         requestData.requestType = 'GET';
                         apiRequest.textContent = requestData.url;
@@ -203,9 +206,9 @@
                                 responseData.textContent = responseRaw;
                                 parsedData = JSON.parse(responseRaw);
                                 // set total videos
-                                videoCount = parsedData.count;
-                                count.textContent = 'Total videos: ' + videoCount;
-                                setRequestData('get1video');
+                                totalVideos = parsedData.count;
+                                count.textContent = 'Total videos: ' + totalVideos;
+                                setRequestData('getVideos');
                               } else if (requestID === 'get1video') {
                                 responseRaw = httpRequest.responseText;
                                 responseData.textContent = responseRaw;
@@ -219,8 +222,8 @@
                                 responseRaw = httpRequest.responseText;
                                 responseData.textContent = responseRaw;
                                 // increment offset
-                                offset++;
-                                if (offset < videoCount) {
+                                callNumber++;
+                                if (callNumber < totalVideos) {
                                     // move on to next video
                                     setRequestData('get1video');
                                 } else {
@@ -239,9 +242,9 @@
                     };
                 // set up request data
                 requestParams = "url=" + encodeURIComponent(options.url) + "&requestType=" + options.requestType;
-                if (options.requestBody) {
-                    dataString = JSON.stringify(options.requestBody);
-                    requestParams += "&requestBody=" + encodeURIComponent(dataString);
+                // only add client id and secret if both were submitted
+                if (isDefined(clientId) && isDefined(clientSecret)) {
+                    requestParams += '&client_id=' + clientId + '&client_secret=' + clientSecret;
                 }
 
                 // set response handler
@@ -256,16 +259,21 @@
 
             function init() {
                 // event handlers
-                makeFeed.addEventListener('click' function() {
+                makeFeed.addEventListener('click', function() {
                     var numVideos;
-                    accountId = account_id.value;
                     clientId = client_id.value;
                     clientSecret = client_secret.value;
+                    if (isDefined(clientId) && isDefined(clientSecret)) {
+                        accountId = account_id.value;
+                    } else {
+                        accountId = '1752604059001';
+                    }
                     sort = getSelectedValue(sortSelect);
                     sortDirection = getSelectedValue(directionSelect);
                     if (isDefined(sortDirection)) {
                         sort = sortDirection + sort;
                     }
+                    search = searchStr.value;
                     numVideos = getSelectedValue(numberSelect);
                     if (numVideos === 'all') {
                         // we need to get the count

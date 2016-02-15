@@ -220,9 +220,11 @@
                             iMax = videosArray.length
                             callback = function(idx, sources) {
                                 if (sources.length > 0) {
+                                    // get the best MP4 rendition
                                     var source = processSources(sources);
                                     videosArray[idx].source = source;
                                 } else {
+                                    // video has no sources
                                     videosArray[idx].source = null;
                                 }
                                 if (callNumber < iMax) {
@@ -232,17 +234,19 @@
                                     i = iMax;
                                     while (i < videosArray.length) {
                                         i--;
+                                        if (videosArray[i].source = null) {
+                                            videosArray.splice(i, 1);
+                                        }
                                     }
+                                    console.log('videosArray', videosArray);
                                 }
                             };
-                        for (i = 0; i < iMax; i += 1) {
 
-                        }
-                        endPoint = accountId + '/videos?limit=1&sort=created_at&offset=' + offset;
+                        endPoint = accountId + '/videos/' + videosArray[callNumber].id + '/sources';
                         requestData.url = baseURL + endPoint;
                         requestData.requestType = 'GET';
                         apiRequest.textContent = requestData.url;
-                        getMediaData(requestData, id);
+                        getMediaData(requestData, id, callback);
                         break;
                 }
             }
@@ -288,7 +292,8 @@
                                             logger.textContent = 'Processing ' + video_name;
                                             setRequestData('getVideos');
                                         } else {
-                                            logger.textContent = 'Video data for ' + totalVideos + ' retrieved; getting sources...'
+                                            logger.textContent = 'Video data for ' + totalVideos + ' retrieved; getting sources...';
+                                            callNumber = 0;
                                             setRequestData('getVideoSources');
                                         }
                                     } else if (requestID === 'getVideoSources') {

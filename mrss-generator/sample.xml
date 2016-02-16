@@ -1,0 +1,338 @@
+<rss version="2.0"
+    xmlns:media="http://search.yahoo.com/mrss/"
+    xmlns:dcterms="http://purl.org/dc/terms/">
+    <channel>
+        <title>MRSS Feed</title>
+        <description>My MRSS Feed</description>
+        <item
+            xmlns:media="http://search.yahoo.com/mrss/"
+            xmlns:dcterms="http://purl.org/dc/terms/">
+            <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4093643993001</link>
+            <pubDate>Wed, 04 Mar 2015 20:56:14 GMT</pubDate>
+            <media:content url="http://brightcove04.brightcove.com/22/1752604059001/201503/2352/1752604059001_4093861847001_f8cbabd6-161b-49da-921b-b6acf3d6c3ef-AWSAccessKeyId-AKIAJWBBMGHEBQ6SISMA-Expires-1425588974-Signature-E3kIL5-2BIzZeSIrOXqYZ59g7hNj4-3D.mp4?pubId=1752604059001&videoId=4093643993001" fileSize="14384740" type="video/quicktime" medium="video" duration="29.215" isDefault="true" height="270" width="480">
+                <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4093643993001"/>
+                <media:title>Tiger</media:title>
+                <media:description>Tigress and her cub</media:description>
+                <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201503/2352/1752604059001_4093861839001_f8cbabd6-161b-49da-921b-b6acf3d6c3ef-AWSAccessKeyId-AKIAJWBBMGHEBQ6SISMA-Expires-1425588974-Signature-E3kIL5-2BIzZeSIrOXqYZ59g7hNj4-3D-th.jpg?pubId=1752604059001&videoId=4093643993001" height="90" width="160"/>
+                <dcterms:valid
+                    xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                </dcterms:valid>
+                <dcterms:type>live-video</dcterms:type>
+            </item>
+            <item
+                xmlns:media="http://search.yahoo.com/mrss/"
+                xmlns:dcterms="http://purl.org/dc/terms/">
+                <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4740963811001</link>
+                <pubDate>Fri, 05 Feb 2016 16:11:43 GMT</pubDate>
+                <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4740998181001_4740963811001.mp4?pubId=1752604059001&videoId=4740963811001" fileSize="6336344" type="video/quicktime" medium="video" duration="29.9" isDefault="true" height="540" width="960">
+                    <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4740963811001"/>
+                    <media:title>redpoll-no-audio cue point doc</media:title>
+                    <media:description>null</media:description>
+                    <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201602/3018/1752604059001_4740997056001_4740963811001-th.jpg?pubId=1752604059001&videoId=4740963811001" height="90" width="160"/>
+                    <dcterms:valid
+                        xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                    </dcterms:valid>
+                    <dcterms:type>live-video</dcterms:type>
+                </item>
+                <item
+                    xmlns:media="http://search.yahoo.com/mrss/"
+                    xmlns:dcterms="http://purl.org/dc/terms/">
+                    <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=2026618970001</link>
+                    <pubDate>Mon, 10 Dec 2012 19:55:53 GMT</pubDate>
+                    <media:content url="http://brightcove.vo.llnwd.net/e1/uds/pd/1752604059001/1752604059001_2026639780001_Sea-Marvels.mp4?pubId=1752604059001&videoId=2026618970001" fileSize="31861167" type="video/quicktime" medium="video" duration="155.734" isDefault="true" height="360" width="640">
+                        <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=2026618970001"/>
+                        <media:title>Sea-Marvels</media:title>
+                        <media:description>Sea-Marvels</media:description>
+                        <media:thumbnailurl="http://brightcove.vo.llnwd.net/e1/pd/1752604059001/1752604059001_2026634281001_th-50c63e49e4b018b56fc84f6d-1592194022001.jpg?pubId=1752604059001&videoId=2026618970001" height="null" width="null"/>
+                        <dcterms:valid
+                            xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                        </dcterms:valid>
+                        <dcterms:type>live-video</dcterms:type>
+                    </item>
+                    <item
+                        xmlns:media="http://search.yahoo.com/mrss/"
+                        xmlns:dcterms="http://purl.org/dc/terms/">
+                        <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4426931680001</link>
+                        <pubDate>Mon, 17 Aug 2015 15:13:43 GMT</pubDate>
+                        <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4427022167001_4426931680001.mp4?pubId=1752604059001&videoId=4426931680001" fileSize="33471977" type="video/quicktime" medium="video" duration="155.573" isDefault="true" height="360" width="640">
+                            <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4426931680001"/>
+                            <media:title>Sea Marvels.mp4</media:title>
+                            <media:description>null</media:description>
+                            <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201508/91/1752604059001_4427022138001_4426931680001-th.jpg?pubId=1752604059001&videoId=4426931680001" height="90" width="160"/>
+                            <dcterms:valid
+                                xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                            </dcterms:valid>
+                            <dcterms:type>live-video</dcterms:type>
+                        </item>
+                        <item
+                            xmlns:media="http://search.yahoo.com/mrss/"
+                            xmlns:dcterms="http://purl.org/dc/terms/">
+                            <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4713495203001</link>
+                            <pubDate>Wed, 20 Jan 2016 15:37:17 GMT</pubDate>
+                            <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4713507969001_4713495203001.mp4?pubId=1752604059001&videoId=4713495203001" fileSize="12594478" type="video/quicktime" medium="video" duration="231.99" isDefault="true" height="720" width="1280">
+                                <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4713495203001"/>
+                                <media:title>Introduction to XML</media:title>
+                                <media:description>This video provides an introduction to working with XML languages such as BEML</media:description>
+                                <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201601/1040/1752604059001_4713507921001_4713495203001-th.jpg?pubId=1752604059001&videoId=4713495203001" height="90" width="160"/>
+                                <dcterms:valid
+                                    xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                </dcterms:valid>
+                                <dcterms:type>live-video</dcterms:type>
+                            </item>
+                            <item
+                                xmlns:media="http://search.yahoo.com/mrss/"
+                                xmlns:dcterms="http://purl.org/dc/terms/">
+                                <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4713495235001</link>
+                                <pubDate>Wed, 20 Jan 2016 15:51:49 GMT</pubDate>
+                                <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4713527652001_4713495235001.mp4?pubId=1752604059001&videoId=4713495235001" fileSize="13646450" type="video/quicktime" medium="video" duration="137.787" isDefault="true" height="720" width="1280">
+                                    <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4713495235001"/>
+                                    <media:title>Brightcove Smart Players</media:title>
+                                    <media:description>An introduction to the Brightcove Smart Player</media:description>
+                                    <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201601/2256/1752604059001_4713527587001_4713495235001-th.jpg?pubId=1752604059001&videoId=4713495235001" height="90" width="160"/>
+                                    <dcterms:valid
+                                        xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                    </dcterms:valid>
+                                    <dcterms:type>live-video</dcterms:type>
+                                </item>
+                                <item
+                                    xmlns:media="http://search.yahoo.com/mrss/"
+                                    xmlns:dcterms="http://purl.org/dc/terms/">
+                                    <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4632915546001</link>
+                                    <pubDate>Thu, 26 Nov 2015 11:20:22 GMT</pubDate>
+                                    <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4632957791001_4632915546001.mp4?pubId=1752604059001&videoId=4632915546001" fileSize="2739852" type="video/quicktime" medium="video" duration="13.072" isDefault="true" height="480" width="640">
+                                        <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4632915546001"/>
+                                        <media:title>Sea_Turtle_Solo.mov</media:title>
+                                        <media:description>null</media:description>
+                                        <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201511/1093/1752604059001_4632957788001_4632915546001-th.jpg?pubId=1752604059001&videoId=4632915546001" height="90" width="120"/>
+                                        <dcterms:valid
+                                            xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                        </dcterms:valid>
+                                        <dcterms:type>live-video</dcterms:type>
+                                    </item>
+                                    <item
+                                        xmlns:media="http://search.yahoo.com/mrss/"
+                                        xmlns:dcterms="http://purl.org/dc/terms/">
+                                        <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4607357817001</link>
+                                        <pubDate>Wed, 11 Nov 2015 16:55:27 GMT</pubDate>
+                                        <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4607371146001_4607357817001.mp4?pubId=1752604059001&videoId=4607357817001" fileSize="3318556" type="video/quicktime" medium="video" duration="15.7" isDefault="true" height="540" width="960">
+                                            <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4607357817001"/>
+                                            <media:title>cta-doc-grand-prix-tire-no-audio.mp4</media:title>
+                                            <media:description>null</media:description>
+                                            <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201511/807/1752604059001_4607368676001_4607357817001-th.jpg?pubId=1752604059001&videoId=4607357817001" height="90" width="160"/>
+                                            <dcterms:valid
+                                                xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                            </dcterms:valid>
+                                            <dcterms:type>live-video</dcterms:type>
+                                        </item>
+                                        <item
+                                            xmlns:media="http://search.yahoo.com/mrss/"
+                                            xmlns:dcterms="http://purl.org/dc/terms/">
+                                            <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4511351172001</link>
+                                            <pubDate>Sat, 26 Sep 2015 14:05:36 GMT</pubDate>
+                                            <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4511373369001_4511351172001.mp4?pubId=1752604059001&videoId=4511351172001" fileSize="2551745" type="video/quicktime" medium="video" duration="11.135" isDefault="true" height="540" width="960">
+                                                <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4511351172001"/>
+                                                <media:title>Oyster Catcher</media:title>
+                                                <media:description>null</media:description>
+                                                <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201509/967/1752604059001_4511372842001_4511351172001-th.jpg?pubId=1752604059001&videoId=4511351172001" height="90" width="160"/>
+                                                <dcterms:valid
+                                                    xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                </dcterms:valid>
+                                                <dcterms:type>live-video</dcterms:type>
+                                            </item>
+                                            <item
+                                                xmlns:media="http://search.yahoo.com/mrss/"
+                                                xmlns:dcterms="http://purl.org/dc/terms/">
+                                                <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4511340777001</link>
+                                                <pubDate>Sat, 26 Sep 2015 14:05:11 GMT</pubDate>
+                                                <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4511372796001_4511340777001.mp4?pubId=1752604059001&videoId=4511340777001" fileSize="3251714" type="video/quicktime" medium="video" duration="14.442" isDefault="true" height="540" width="960">
+                                                    <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4511340777001"/>
+                                                    <media:title>Brown Pelican</media:title>
+                                                    <media:description>null</media:description>
+                                                    <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201509/3441/1752604059001_4511372778001_4511340777001-th.jpg?pubId=1752604059001&videoId=4511340777001" height="90" width="160"/>
+                                                    <dcterms:valid
+                                                        xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                    </dcterms:valid>
+                                                    <dcterms:type>live-video</dcterms:type>
+                                                </item>
+                                                <item
+                                                    xmlns:media="http://search.yahoo.com/mrss/"
+                                                    xmlns:dcterms="http://purl.org/dc/terms/">
+                                                    <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4457254747001</link>
+                                                    <pubDate>Tue, 01 Sep 2015 16:25:18 GMT</pubDate>
+                                                    <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4457269242001_4457254747001.mp4?pubId=1752604059001&videoId=4457254747001" fileSize="33469979" type="video/quicktime" medium="video" duration="155.573" isDefault="true" height="360" width="640">
+                                                        <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4457254747001"/>
+                                                        <media:title>sea_marvels.mp4</media:title>
+                                                        <media:description>null</media:description>
+                                                        <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201509/3436/1752604059001_4457269230001_4457254747001-th.jpg?pubId=1752604059001&videoId=4457254747001" height="90" width="160"/>
+                                                        <dcterms:valid
+                                                            xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                        </dcterms:valid>
+                                                        <dcterms:type>live-video</dcterms:type>
+                                                    </item>
+                                                    <item
+                                                        xmlns:media="http://search.yahoo.com/mrss/"
+                                                        xmlns:dcterms="http://purl.org/dc/terms/">
+                                                        <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454723119001</link>
+                                                        <pubDate>Mon, 31 Aug 2015 14:51:42 GMT</pubDate>
+                                                        <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4475312739001_4454723119001.mp4?pubId=1752604059001&videoId=4454723119001" fileSize="2887303" type="video/quicktime" medium="video" duration="14.08" isDefault="true" height="540" width="960">
+                                                            <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454723119001"/>
+                                                            <media:title>Leafy Seadragon</media:title>
+                                                            <media:description>null</media:description>
+                                                            <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201509/116/1752604059001_4475309190001_4454723119001-th.jpg?pubId=1752604059001&videoId=4454723119001" height="90" width="160"/>
+                                                            <dcterms:valid
+                                                                xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                            </dcterms:valid>
+                                                            <dcterms:type>live-video</dcterms:type>
+                                                        </item>
+                                                        <item
+                                                            xmlns:media="http://search.yahoo.com/mrss/"
+                                                            xmlns:dcterms="http://purl.org/dc/terms/">
+                                                            <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454629914001</link>
+                                                            <pubDate>Mon, 31 Aug 2015 14:31:42 GMT</pubDate>
+                                                            <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4475317729001_4454629914001.mp4?pubId=1752604059001&videoId=4454629914001" fileSize="5669757" type="video/quicktime" medium="video" duration="24.895" isDefault="true" height="540" width="960">
+                                                                <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454629914001"/>
+                                                                <media:title>laughing_gull.mp4</media:title>
+                                                                <media:description>null</media:description>
+                                                                <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201509/124/1752604059001_4475315192001_4454629914001-th.jpg?pubId=1752604059001&videoId=4454629914001" height="90" width="160"/>
+                                                                <dcterms:valid
+                                                                    xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                </dcterms:valid>
+                                                                <dcterms:type>live-video</dcterms:type>
+                                                            </item>
+                                                            <item
+                                                                xmlns:media="http://search.yahoo.com/mrss/"
+                                                                xmlns:dcterms="http://purl.org/dc/terms/">
+                                                                <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454620115001</link>
+                                                                <pubDate>Mon, 31 Aug 2015 14:31:36 GMT</pubDate>
+                                                                <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4475318289001_4454620115001.mp4?pubId=1752604059001&videoId=4454620115001" fileSize="2550580" type="video/quicktime" medium="video" duration="11.135" isDefault="true" height="540" width="960">
+                                                                    <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454620115001"/>
+                                                                    <media:title>oystercatcher.mp4</media:title>
+                                                                    <media:description>null</media:description>
+                                                                    <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201509/2572/1752604059001_4475317765001_4454620115001-th.jpg?pubId=1752604059001&videoId=4454620115001" height="90" width="160"/>
+                                                                    <dcterms:valid
+                                                                        xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                    </dcterms:valid>
+                                                                    <dcterms:type>live-video</dcterms:type>
+                                                                </item>
+                                                                <item
+                                                                    xmlns:media="http://search.yahoo.com/mrss/"
+                                                                    xmlns:dcterms="http://purl.org/dc/terms/">
+                                                                    <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454620114001</link>
+                                                                    <pubDate>Mon, 31 Aug 2015 14:31:33 GMT</pubDate>
+                                                                    <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4454713931001_4454620114001.mp4?pubId=1752604059001&videoId=4454620114001" fileSize="9390630" type="video/quicktime" medium="video" duration="41.237" isDefault="true" height="540" width="960">
+                                                                        <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454620114001"/>
+                                                                        <media:title>greathornedowl.mp4</media:title>
+                                                                        <media:description>null</media:description>
+                                                                        <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201508/1572/1752604059001_4454713750001_4454620114001-th.jpg?pubId=1752604059001&videoId=4454620114001" height="90" width="160"/>
+                                                                        <dcterms:valid
+                                                                            xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                        </dcterms:valid>
+                                                                        <dcterms:type>live-video</dcterms:type>
+                                                                    </item>
+                                                                    <item
+                                                                        xmlns:media="http://search.yahoo.com/mrss/"
+                                                                        xmlns:dcterms="http://purl.org/dc/terms/">
+                                                                        <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454629913001</link>
+                                                                        <pubDate>Mon, 31 Aug 2015 14:31:21 GMT</pubDate>
+                                                                        <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4475314553001_4454629913001.mp4?pubId=1752604059001&videoId=4454629913001" fileSize="7106051" type="video/quicktime" medium="video" duration="31.487" isDefault="true" height="540" width="960">
+                                                                            <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454629913001"/>
+                                                                            <media:title>greatblueheron.mp4</media:title>
+                                                                            <media:description>null</media:description>
+                                                                            <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201509/1124/1752604059001_4475315633001_4454629913001-th.jpg?pubId=1752604059001&videoId=4454629913001" height="90" width="160"/>
+                                                                            <dcterms:valid
+                                                                                xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                            </dcterms:valid>
+                                                                            <dcterms:type>live-video</dcterms:type>
+                                                                        </item>
+                                                                        <item
+                                                                            xmlns:media="http://search.yahoo.com/mrss/"
+                                                                            xmlns:dcterms="http://purl.org/dc/terms/">
+                                                                            <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454620113001</link>
+                                                                            <pubDate>Mon, 31 Aug 2015 14:31:08 GMT</pubDate>
+                                                                            <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4475321519001_4454620113001.mp4?pubId=1752604059001&videoId=4454620113001" fileSize="5228247" type="video/quicktime" medium="video" duration="23.018" isDefault="true" height="540" width="960">
+                                                                                <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454620113001"/>
+                                                                                <media:title>Brown_Pelicans_on_the_Rocks.mpg</media:title>
+                                                                                <media:description>null</media:description>
+                                                                                <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201509/572/1752604059001_4475318377001_4454620113001-th.jpg?pubId=1752604059001&videoId=4454620113001" height="90" width="160"/>
+                                                                                <dcterms:valid
+                                                                                    xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                                </dcterms:valid>
+                                                                                <dcterms:type>live-video</dcterms:type>
+                                                                            </item>
+                                                                            <item
+                                                                                xmlns:media="http://search.yahoo.com/mrss/"
+                                                                                xmlns:dcterms="http://purl.org/dc/terms/">
+                                                                                <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454620112001</link>
+                                                                                <pubDate>Mon, 31 Aug 2015 14:30:55 GMT</pubDate>
+                                                                                <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4475321592001_4454620112001.mp4?pubId=1752604059001&videoId=4454620112001" fileSize="3251345" type="video/quicktime" medium="video" duration="14.442" isDefault="true" height="540" width="960">
+                                                                                    <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4454620112001"/>
+                                                                                    <media:title>Brown Pelican</media:title>
+                                                                                    <media:description>null</media:description>
+                                                                                    <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201509/3572/1752604059001_4475321569001_4454620112001-th.jpg?pubId=1752604059001&videoId=4454620112001" height="90" width="160"/>
+                                                                                    <dcterms:valid
+                                                                                        xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                                    </dcterms:valid>
+                                                                                    <dcterms:type>live-video</dcterms:type>
+                                                                                </item>
+                                                                                <item
+                                                                                    xmlns:media="http://search.yahoo.com/mrss/"
+                                                                                    xmlns:dcterms="http://purl.org/dc/terms/">
+                                                                                    <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4451061613001</link>
+                                                                                    <pubDate>Sat, 29 Aug 2015 15:09:09 GMT</pubDate>
+                                                                                    <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4451268775001_4451061613001.mp4?pubId=1752604059001&videoId=4451061613001" fileSize="6096515" type="video/quicktime" medium="video" duration="28.88" isDefault="true" height="344" width="640">
+                                                                                        <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4451061613001"/>
+                                                                                        <media:title>Sea_LionFish</media:title>
+                                                                                        <media:description>VC default profile</media:description>
+                                                                                        <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201508/1795/1752604059001_4451263812001_4451061613001-th.jpg?pubId=1752604059001&videoId=4451061613001" height="86" width="160"/>
+                                                                                        <dcterms:valid
+                                                                                            xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                                        </dcterms:valid>
+                                                                                        <dcterms:type>live-video</dcterms:type>
+                                                                                    </item>
+                                                                                    <item
+                                                                                        xmlns:media="http://search.yahoo.com/mrss/"
+                                                                                        xmlns:dcterms="http://purl.org/dc/terms/">
+                                                                                        <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4451142469001</link>
+                                                                                        <pubDate>Sat, 29 Aug 2015 15:07:18 GMT</pubDate>
+                                                                                        <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4451263754001_4451142469001.mp4?pubId=1752604059001&videoId=4451142469001" fileSize="1122280" type="video/quicktime" medium="video" duration="11.2" isDefault="true" height="224" width="398">
+                                                                                            <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4451142469001"/>
+                                                                                            <media:title>Water-Bubbles</media:title>
+                                                                                            <media:description>VC default profile</media:description>
+                                                                                            <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201508/2819/1752604059001_4451263750001_4451142469001-th.jpg?pubId=1752604059001&videoId=4451142469001" height="90" width="160"/>
+                                                                                            <dcterms:valid
+                                                                                                xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                                            </dcterms:valid>
+                                                                                            <dcterms:type>live-video</dcterms:type>
+                                                                                        </item>
+                                                                                        <item
+                                                                                            xmlns:media="http://search.yahoo.com/mrss/"
+                                                                                            xmlns:dcterms="http://purl.org/dc/terms/">
+                                                                                            <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4446983094001</link>
+                                                                                            <pubDate>Thu, 27 Aug 2015 14:51:14 GMT</pubDate>
+                                                                                            <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4447061875001_4446983094001.mp4?pubId=1752604059001&videoId=4446983094001" fileSize="1160856" type="video/quicktime" medium="video" duration="5.99" isDefault="true" height="540" width="960">
+                                                                                                <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4446983094001"/>
+                                                                                                <media:title>bcls-ad-6-5seconds</media:title>
+                                                                                                <media:description>http://solutions.brightcove.com/bcls/ads/bc-ads/bcls-ad-6-5seconds.mp4</media:description>
+                                                                                                <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201508/3526/1752604059001_4447061851001_4446983094001-th.jpg?pubId=1752604059001&videoId=4446983094001" height="90" width="160"/>
+                                                                                                <dcterms:valid
+                                                                                                    xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                                                </dcterms:valid>
+                                                                                                <dcterms:type>live-video</dcterms:type>
+                                                                                            </item>
+                                                                                            <item
+                                                                                                xmlns:media="http://search.yahoo.com/mrss/"
+                                                                                                xmlns:dcterms="http://purl.org/dc/terms/">
+                                                                                                <link>https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4446941108001</link>
+                                                                                                <pubDate>Thu, 27 Aug 2015 14:50:38 GMT</pubDate>
+                                                                                                <media:content url="http://uds.ak.o.brightcove.com/1752604059001/1752604059001_4447059766001_4446941108001.mp4?pubId=1752604059001&videoId=4446941108001" fileSize="1665598" type="video/quicktime" medium="video" duration="7.383" isDefault="true" height="540" width="960">
+                                                                                                    <media:player url="https://players.brightcove.net/1752604059001/default_default/index.html?videoId=4446941108001"/>
+                                                                                                    <media:title>bcls-ad-5-7seconds</media:title>
+                                                                                                    <media:description>http://solutions.brightcove.com/bcls/ads/bc-ads/bcls-ad-5-7seconds.mp4</media:description>
+                                                                                                    <media:thumbnailurl="https://bcsecure01-a.akamaihd.net/6/1752604059001/201508/2730/1752604059001_4447059754001_4446941108001-th.jpg?pubId=1752604059001&videoId=4446941108001" height="90" width="160"/>
+                                                                                                    <dcterms:valid
+                                                                                                        xmlns:dcterms="http://purl.org/dc/terms/">end=2020-10-15T00:00+01:00; scheme=W3C-DTF
+                                                                                                    </dcterms:valid>
+                                                                                                    <dcterms:type>live-video</dcterms:type>
+                                                                                                </item>
+                                                                                            </channel>
+                                                                                        </rss>

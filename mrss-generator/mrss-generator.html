@@ -217,7 +217,12 @@
                     for (i = 0; i < iMax; i += 1) {
                         video = videosArray[i];
                         videoURL = encodeURI(video.source.src.replace(/&/g, '&amp;'));
-                        thumbnailURL = encodeURI(video.images.thumbnail.sources[0].src.replace(/&/g, '&amp;'));
+                        if (isDefined(video.images)) {
+                            thumbnailURL = encodeURI(video.images.thumbnail.sources[0].src.replace(/&/g, '&amp;'));
+                        } else {
+                            thumbnailURL = encodeURI(video.thumbnail.replace(/&/g, '&amp;'));
+                        }
+
                         pubdate = new Date(video.created_at).toGMTString();
                         mrssStr += sItem;
                         mrssStr += sLink + 'https://players.brightcove.net/' + accountId + '/default_default/index.html?videoId=' + video.id + eLink;
@@ -226,7 +231,13 @@
                         mrssStr += sMediaPlayer + ' url="' + 'https://players.brightcove.net/' + accountId + '/default_default/index.html?videoId=' + video.id + '"' + eMediaPlayer;
                         mrssStr += sMediaTitle + video.name + eMediaTitle;
                         mrssStr += sMediaDescription + video.description + eMediaDescription;
-                        mrssStr += sMediaThumbnail + ' url="' + thumbnailURL + '" height="' + video.images.thumbnail.sources[0].height + '" width="' + video.images.thumbnail.sources[0].width + '"' + eMediaThumbnail;
+                        mrssStr += sMediaThumbnail + ' url="' + thumbnailURL + '"';
+                        if (isDefined(video.images)) {
+                            mrssStr += ' height="' + video.images.thumbnail.sources[0].height + '" width="' + video.images.thumbnail.sources[0].width + '"' + eMediaThumbnail;
+                        } else {
+                            mrssStr += eMediaThumbnail;
+                        }
+
                         mrssStr += eMediaContent;
                         mrssStr += eItem;
                     }
